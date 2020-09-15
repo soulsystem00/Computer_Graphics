@@ -1,31 +1,34 @@
 ﻿#include <GL/glut.h>
-void myInit(void)
+void myInit(void) // 메인에서 호출되는 함수
 {
-	glClearColor(1.0, 1.0, 1.0, 0.0); // set the bg color to a bright white
-	glColor3f(0.0f, 0.0f, 0.0f); // set the drawing color to black
-	glPointSize(4.0); //set the point size to 4 by 4 pixels
+	glClearColor(1.0, 1.0, 1.0, 0.0); // 배경색 정하기 (red, green, blue, alpha(투명도)) 
+	glColor3f(0.0f, 0.0f, 0.0f); // vertex나 polygon의 색상을 설정, f가 붙었으니 매개변수는 float형
+	glPointSize(4.0); // 점의 크기를 설정
+	
+	// 가시공간, 가시부피 설정 및 투영설정 - 추후 설명
 	glMatrixMode(GL_PROJECTION);// set up appropriate matrices- to be explained
 	glLoadIdentity();// to be explained
-	gluOrtho2D(0.0, 640.0, 0.0, 480.0);// to be explained
-	 
+	gluOrtho2D(0.0, 640.0, 0.0, 480.0);// to be explaine
+
 }
-void myDisplay(void)
+void myDisplay(void) // 이벤트 발생 시 작동하는 함수
 {
-	glClear(GL_COLOR_BUFFER_BIT); // clear the screen
+	glClear(GL_COLOR_BUFFER_BIT); // 윈도우 안의 각 픽셀의 컬러 버퍼 지우기(리셋을 의미)
 	glBegin(GL_POINTS);
-	glVertex2i(100, 50); // draw some points (don't know how many)
-	glVertex2i(100, 130);
-	glVertex2i(150, 130);
+		glVertex2i(100, 50); // vertex를 이용하여 점을 찍음
+		glVertex2i(100, 130);// i가 왔으니 매개변수는 정수형
+		glVertex2i(150, 130);
 	glEnd();
-	glFlush(); // send all output to display
+	
+	glFlush(); // 일정 분량의 명령을 모아서 한번에 실행시켜주는 함수
 	 
 }
 void main(int argc, char** argv)
 {
-	glutInitWindowSize(640, 480); // set the window size
-	glutInitWindowPosition(100, 150); // set the window position on the screen
-	glutCreateWindow("my first attempt"); // open the screen window(with its exciting title)
-	glutDisplayFunc(myDisplay); // register the redraw function
+	glutInitWindowSize(640, 480); // 윈도우 창의 크기를 설정 
+	glutInitWindowPosition(100, 150); // 윈도우 창의 위치를 설정
+	glutCreateWindow("my first attempt"); // 윈도우 창의 제목 설정
+	glutDisplayFunc(myDisplay); // 이벤트 발생시 myDisplay라는 함수가 동작하도록 설정
 	myInit();
-	glutMainLoop(); // go into a perpetual loop
+	glutMainLoop(); // 메인 함수의 마지막에 오는 함수, 이벤트 처리 담당
 }
