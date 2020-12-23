@@ -5,6 +5,9 @@
 
 using namespace std;
 
+// 이번에는 texture object를 사용하여
+// 여러개의 도형에 여러개의 텍스쳐를 입혀본 예시이다.
+
 static GLuint texName[2];
 struct BitMapFile
 {

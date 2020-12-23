@@ -2,8 +2,13 @@
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <GL/glut.h>
-
 #include <fstream>
+
+// Vertex의 정보는 코드에 직접 기입할 수도 있지만
+// 파일에 저장되어있는 것을 불러와 사용할 수도 있다.
+// 보다 복잡한 그림의 경우에는 파일에 저장되어 있는 것을 사용한다.  
+// 이렇게 파일에서 그림을 불러와 복잡한 그림을 그리는 예시이다.  
+
 
 void drawPolyLineFile(const char* fileName) {
 
@@ -41,32 +46,6 @@ void render() {
 
 	glClear(GL_COLOR_BUFFER_BIT);
 	setWindow(0, 640.0, 0, 480.0);		// set a fixed window
-	//glViewport(0, 0, 320, 240);
-	//drawPolyLineFile("dino.dat");		// draw it again
-	//glViewport(320, 0, 320, 240);
-	//drawPolyLineFile("dino.dat");
-	//glViewport(0, 240, 320, 240);
-	//drawPolyLineFile("dino.dat");
-	//glViewport(320, 240, 320, 240);
-	//drawPolyLineFile("dino.dat");
-	int n = 1000;
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			glViewport(i*(640/n), j*(480/n), 640/n, 480/n);
-			drawPolyLineFile("dino.dat");
-		}
-	}
-	glFlush();
-
-}
-
-void render2() {
-
-	glClear(GL_COLOR_BUFFER_BIT);
-	setWindow(0, 640.0, 0, 480.0);		// set a fixed window
-	glViewport(320, 0, 320, 480);
 	drawPolyLineFile("dino.dat");		// draw it again
 	glFlush();
 
@@ -76,11 +55,10 @@ int main(int argc, char** argv)
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
-	glutInitWindowSize(640,480);
+	glutInitWindowSize(640, 480);
 	glutInitWindowPosition(0, 0);
 	glutCreateWindow("Poly Line Demo o_O");
-	glutDisplayFunc(render);
-	//glutDisplayFunc(render2);
+	glutDisplayFunc(render);;
 	glutMainLoop();
 	return(0);
 

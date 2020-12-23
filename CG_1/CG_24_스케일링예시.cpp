@@ -3,6 +3,19 @@
 #include <iostream>
 #include <GL/glut.h>
 using namespace std;
+
+// 이번 예시는 변환에서의 스케일링에 관한 예시이다.
+// 스케일링 함수를 사용하면 
+// 기존의 Vertex에서 값이 증가하여
+// 도형의 크기가 커지는 것을 알 수 있다.
+// 각 Vertex를 glscale함수의 인자만큼 
+// 곱한 것이 scaling의 결과가 된다.
+// 이번 예시에서 translate를 하지 않았음에도 불구하고
+// 원의 위치가 옮겨진것을 볼 수 있는데
+// 이것은 원의 중점이 0이 아니기 때문에
+// 곱셈의 영향을 받기 때문이다.
+
+
 #define PI 3.14159265
 #define N 40.0 
 
@@ -32,8 +45,8 @@ void drawDisc(float R, float X, float Y, float Z)
 void drawScene()
 {
     glClear(GL_COLOR_BUFFER_BIT);
-    glScalef(1.4, 1.4, 1.0); // 스케일링 함수
-    drawDisc(20.0, 50.0, 50.0, 0.0);
+    //glScalef(1.4, 1.4, 1.0); // 스케일링 함수
+    drawDisc(20.0, 50, 50, 0.0);
     glFlush();
 }
 int main(int argc, char** argv)

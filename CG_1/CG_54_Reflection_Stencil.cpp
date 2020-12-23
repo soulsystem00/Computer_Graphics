@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <cmath>
 #include <GL/glut.h>
@@ -6,6 +5,12 @@
 #define PI 3.14159265358979324
 
 using namespace std;
+
+// 스텐실 버퍼는 보여질 부분과 보여지지 않을 부분을 구분해준다.
+// 버퍼의 값이 1이면 해당 픽셀은 보여지게 되고 
+// 0이면 안보이게 된다.
+// 이걸 이용하여 여러 효과를 만들 수 있다.
+
 
 // Globals. 
 static float latAngle = 0.0; // Latitudinal angle.

@@ -1,4 +1,11 @@
 #include <GL/glut.h>
+
+
+// Polygon의 특징으로는 
+// 볼록한 도형 만들 그릴 수 있다는 것이다.
+// 만일 오목한 도형을 그리려고 한다면 
+// 자신이 생각한것과는 다른 도형이 그려질 것이다.
+
 void myInit(void)
 {
     glClearColor(1.0, 1.0, 1.0, 0.0);      // set the bg color to a bright white

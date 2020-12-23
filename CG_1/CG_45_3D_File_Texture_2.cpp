@@ -5,6 +5,9 @@
 
 using namespace std;
 
+// 이번에는 3D 그림에 텍스쳐를 입혀보는데
+// 같은 그림이 아닌 각 면마다 다른 그림들을 입혀보는 예시이다.
+
 struct BitMapFile
 {
 	int sizeX;

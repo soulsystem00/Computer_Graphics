@@ -3,6 +3,11 @@
 #include <iostream>
 #include <GL/glut.h>
 
+// scale 함수 역시 Vertex에만 적용가능 한 것이 아니라
+// 도형을 그리는 함수에도 적용이 가능하다.
+// 해당 예시는 teapot을 그리는 함수에 스케일링을 적용시킨 예이다.
+
+
 void myInit(void)
 {
     glClearColor(1.0, 1.0, 1.0, 0.0);       // the background color is white

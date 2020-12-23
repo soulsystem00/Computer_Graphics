@@ -1,4 +1,12 @@
 #include <GL/glut.h>
+
+// ViewPort는 하나의 화면을 분할해서 사용하는 것을 말한다.
+// glViewPort 함수를 통해 사용할 수 있다.
+// glViewPort(x시작점, y시작점, 너비, 높이)로 설정 된다.
+// 기존의 그려지는 화면이 Viewport의 크기만큼 줄어들게 된다.
+// 종횡비 역시 영향을 받게 된다.
+// viewport 함수에 주석을 껐다 켜보면 차이를 알 수 있다.
+
 void myInit(void)
 {
 	glClearColor(1.0, 1.0, 1.0, 0.0);      // set the bg color to a bright white

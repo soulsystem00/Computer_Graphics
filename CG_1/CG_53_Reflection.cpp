@@ -3,6 +3,9 @@
 
 using namespace std;
 
+// 이번 예제는 alpha test를 사용하여
+// 오브젝트의 반사효과를 준 예시이다.
+
 // Globals. 
 static float latAngle = 0.0; // Latitudinal angle.
 static float longAngle = 0.0; // Longitudinal angle.

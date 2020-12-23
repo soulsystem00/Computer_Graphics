@@ -3,6 +3,9 @@
 #include <iostream>
 #include <GL/glut.h>
 
+// 이번 예시는 변환에서 rotate
+// 즉, 회전을 적용시킨 예시이다.
+// glRotatef(x축 회전각도, y축 회전각도, z축 회전각도)
 
 void myInit(void)
 {
@@ -32,10 +35,6 @@ int main(int argc, char** argv)
     glClearColor(1.0, 1.0, 1.0, 0.0);
     glutDisplayFunc(drawScene);
     myInit();
-
     glutMainLoop();
-    i += 1;
-    
-    
     return 0;
 }

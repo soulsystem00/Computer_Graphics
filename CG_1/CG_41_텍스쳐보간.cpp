@@ -2,6 +2,19 @@
 #include <GL/gl.h>
 #include <GL/glu.h>
 
+// 텍스쳐가 물체에 입혀질 때 여러 옵션들이 발생할 수 있다.
+// 이는 물체의 크기와 텍스쳐의 크기가 완전히 똑같지 않기 때문에 발생한다.
+// 즉, 텍스쳐에서 여러개의 픽셀들이 물체에서는 하나의 픽셀로 결정이 되는 경우가 있을 것이다.
+// 이러한 것을 어떻게 매핑을 시켜줄 것인지 결정을 해줄수가 있는데
+// GL_LINEAR와 GL_NEAREST가 있다.
+
+// GL_LINEAR는 쉽게 말해 픽셀들을 보간법을 거쳐 부드럽게 표현해주게 된다.
+// 반대로 GL_NEAREST는 여러개의 픽셀에 있는 여러개의 색깔중 하나의 색으로 도형을 칠하게 된다.
+// 이런 차이를 볼 수 있는 예시이다.
+
+
+
+
 #define WIDTH   4
 #define HEIGHT  4
 
@@ -26,8 +39,10 @@ void MyInit() {
         GL_UNSIGNED_BYTE, &MyTexture[0][0][0]);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    //glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    //glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
     glEnable(GL_TEXTURE_2D);
 }

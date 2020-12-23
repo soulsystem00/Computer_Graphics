@@ -1,9 +1,11 @@
-
 #include <iostream>
-
 #include<GL/glut.h>
 
 using namespace std;
+
+// 이번에는 Blenging을 사용하여 
+// 그림자를 만들어보았다.
+
 
 void setup(void)
 {

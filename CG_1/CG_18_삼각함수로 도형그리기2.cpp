@@ -3,6 +3,9 @@
 #include <gl/Gl.h>
 #include <gl/Glu.h>
 #include <gl/Glut.h>
+
+// 삼각함수로 다양한 도형을 그리는 두번째 예시이다.
+
 const int screenWidth = 400;	   // width of the screen window in pixels 
 const int screenHeight = 400;	   // height of the screen window in pixels
 #define PI 3.141592
@@ -26,7 +29,7 @@ void myDisplay(void)
 	unsigned int N = 200;
 	int n = 100;
 	glBegin(GL_LINE_STRIP);
-	for (t = 0; t <= 2*PI; t += 2*PI / N)
+	for (t = 0; t <= 10*PI; t += 2*PI / N)
 	{
 		glVertex2f(t * cos(t), t * sin(t));
 	}

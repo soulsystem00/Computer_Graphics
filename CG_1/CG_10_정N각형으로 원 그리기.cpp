@@ -4,6 +4,11 @@
 #include <math.h>
 
 // demo program to draw a rosette based on a 5-gon 
+// 원을 그리기 위해선
+// 많은 과정을 거쳐야 할 것이다.
+// 하지만 다른 방법으로
+// N각형에서 N의 갯수를 늘려주면 
+// 원에 근사하는 결과를 얻을 수 있을 것이다.
 
 
 class GLintPoint

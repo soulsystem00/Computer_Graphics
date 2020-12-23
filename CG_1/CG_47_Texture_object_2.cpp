@@ -5,6 +5,9 @@
 
 using namespace std;
 
+// 이번 예제 역시 texture object를 사용하여
+// 3d 물체에 텍스쳐를 입힌 예시이다.
+
 /*  Create checkerboard texture  */
 #define checkImageWidth 64
 #define checkImageHeight 64

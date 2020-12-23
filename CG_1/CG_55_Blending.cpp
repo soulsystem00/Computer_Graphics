@@ -1,8 +1,13 @@
-
 #include <iostream>
 #include <GL/glut.h>
 
 using namespace std;
+
+// Blending은 색을 섞는 것을 말한다.
+// 그런데 Alpha 값이 1이면 불투명하기 때문에 색이 섞이지 않는다.
+// 그렇기 때문에 색을 섞기 위해선 Alpha 값을 조정해주어야 한다.
+// 이렇게 조정한 Alpha 값을 바탕으로 
+// 색이 섞이게 된다.
 
 // Globals.
 static int isWire = 0; // Is wireframe?

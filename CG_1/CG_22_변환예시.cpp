@@ -3,6 +3,14 @@
 #include <iostream>
 #include <GL/glut.h>
 using namespace std;
+
+// 도형을 그리고나서 도형의 크기나 위치 같은 것들을 바꿀수가 있다.
+// 이것을 변환이라고 부른다.
+// glTranslate로 위치를 바꿀 수 있고
+// glscale로 크기를 바꿀 수 있다.
+// 해당 예시는 glTranslate를 사용하여 도형의 위치를 옮긴 예시이다.
+
+
 #define PI 3.14159265
 #define N 40.0 
 

@@ -2,6 +2,11 @@
 #include <cmath>
 #include <GL/glut.h>
 
+// 이번에는 Blenging을 사용하여
+// 배경색과 섞는 것이 아닌
+// 도형끼리 섞어보는 예제이다.
+
+
 
 void display(void)
 {

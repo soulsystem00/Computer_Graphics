@@ -1,6 +1,9 @@
 #include <stdlib.h>
 #include <GL/glut.h>
 
+// Sierpinski Gasket 은 삼각형을 그리는 알고리즘이다.
+// 두점의 중점과 한점간의 중점을 그리는 과정을 반복한다.
+// 트리와 같은 모양이 만들어진다.
 void myinit()
 {
 	glClearColor(1.0, 1.0, 1.0, 1.0);			//set the background color to white

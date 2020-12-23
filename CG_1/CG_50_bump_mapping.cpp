@@ -4,6 +4,12 @@
 
 using namespace std;
 
+// 이번 예시는 Bump 매핑을 적용시킨 예시이다.
+// Bump 매핑은 텍스쳐를 매핑을 시킬 때 
+// 굴곡이지게 매핑을 시켜주는 방식이다.
+// 이러한 방식은 기존의 도형을 복잡하게 만들 필요 없이
+// 텍스쳐 매핑을 바꾸는 방법 만으로도 복잡해보이는 도형을 만들 수 있다는 것이다.
+
 // Globals.
 static int isBumpMapped = 0; // Is bump mapping on?
 

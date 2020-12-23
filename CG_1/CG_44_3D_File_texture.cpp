@@ -5,6 +5,10 @@
 
 using namespace std;
 
+// 이번 예시 역시 실제 이미지를 도형에 입혀보는 예시인데
+// 이번에는 2D 도형이 아닌 3D 도형에 텍스쳐를 입혀보는 예시이다.
+
+
 static GLuint texName;
 struct BitMapFile
 {

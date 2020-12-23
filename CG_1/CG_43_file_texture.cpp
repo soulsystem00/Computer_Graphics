@@ -5,6 +5,10 @@
 
 using namespace std;
 
+// 이번 예시는 실제 이미지를 물체에 입혀보는 예시이다.
+
+
+
 static GLuint texName;
 struct BitMapFile
 {

@@ -1,4 +1,9 @@
 ﻿#include <GL/glut.h>
+
+// 기본적인 점을 찍어보는 코드이다.
+// glBegin(GL_POINTS) 를 이용하여 점을 찍는 것으로 설정을 한 후
+// glVertex를 사용하여 점의 위치를 설정해준다.
+
 void myInit(void) // 메인에서 호출되는 함수
 {
 	glClearColor(1.0, 1.0, 1.0, 0.0); // 배경색 정하기 (red, green, blue, alpha(투명도)) 

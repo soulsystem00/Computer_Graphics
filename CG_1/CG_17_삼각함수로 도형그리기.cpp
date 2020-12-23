@@ -3,6 +3,10 @@
 #include <gl/Gl.h>
 #include <gl/Glu.h>
 #include <gl/Glut.h>
+
+// 이번예시는 삼각함수로 원을 그리는 것을 약간 변형시킨 예시이다.
+// 삼각함수를 통하여 다양한 도형을 그릴 수 있다는 것을 보여준다.
+
 const int screenWidth = 400;	   // width of the screen window in pixels 
 const int screenHeight = 400;	   // height of the screen window in pixels
 #define PI 3.141592
@@ -22,11 +26,12 @@ void myDisplay(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT);     // clear the screen 
 	double t = 0;
-	unsigned int N = 4000000;
+	unsigned int N = 200;
 	glBegin(GL_LINE_STRIP);
-	for (t = 0; t <= 2 * PI; t += PI / N)
+	for (t = -PI; t <= PI; t += PI / N)
 	{
-		glVertex2f(cos(t), sin(t));
+		//glVertex2f(cos(t), sin(t));
+		glVertex2f(cos(t), sin(t)* cos(t));
 	}
 	glEnd();
 	glFlush();		   // send all output to display 

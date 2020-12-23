@@ -6,6 +6,9 @@
 
 using namespace std;
 
+// 이번 예시는 수동 매핑이 아닌 다른 방법으로 
+// 3D 물체에 매핑을 시킨 예시이다.
+
 #define PI 3.14159265358979324
 #define R 12.0
 #define r 3.0

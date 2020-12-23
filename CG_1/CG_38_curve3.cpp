@@ -2,6 +2,12 @@
 #include <GL/glut.h>
 using namespace std;
 
+// 이번 예제는 여러개의 control point를 사용하여
+// 베지에 곡선을 그려 볼 수 있는 예제이다.
+// 이를 사용하여 곡선은 그려본다면
+// 모든 control point가 하나의 곡선에 영향을 미친다는 것을 알 수 있다.
+
+
 // Begin globals.
 static int numVal = 0, order = 4, askOrder = 0;
 static long font = (long)GLUT_BITMAP_8_BY_13; // Font selection.

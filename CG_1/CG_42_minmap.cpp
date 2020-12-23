@@ -1,7 +1,13 @@
 #include <GL/glut.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
+// 이번 예제는 텍스처에 색을 입혀보는 예제이다.
+// 텍스쳐를 입히는데에는 여러 옵션들이 있따.
+// GL_MODULATE는 도형의 색상과 텍스쳐의 색상을 곱하여 최종 색상을 만들게 된다.
+// 반대로 GL_REPLACE는 도형의 위에 텍스쳐를 입히는 방식이다.
 
+// 이러한 차이로 인하여 GL_MODULATE는 도형의 색상이 반영되는 반면
+// GL_REPLACE는 도형의 색상이 반영되지 않는다.
 #define WIDTH   4
 #define HEIGHT  4
 

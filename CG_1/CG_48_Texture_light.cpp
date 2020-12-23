@@ -3,9 +3,9 @@
 #include <iostream>
 #include <fstream>
 #include <GL/glut.h>
-
-
 using namespace std;
+
+// 이번 예시는 텍스쳐에 광원 효과까지 넣어본 예시이다.
 
 #define PI 3.14159265358979324
 
